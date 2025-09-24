@@ -4,74 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ministerio Raíz y Roca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <header>
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <h1>Ministerio Raíz y Roca</h1>
-            <p class="subtitle">Sirviendo a la iglesia local con recursos para potenciar un mejor servicio.</p>
+            <div class="nav-brand">
+                <h2>Raíz y Roca</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#oratoria" class="nav-link">Oratoria</a></li>
+                <li><a href="#evangelismo" class="nav-link">Evangelismo</a></li>
+                <li><a href="#discipulado" class="nav-link">Discipulado</a></li>
+                <li><a href="#merchandising" class="nav-link">Merchandising</a></li>
+                <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="#futuras-areas" class="nav-link">Próximamente</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1>Ministerio Raíz y Roca</h1>
+                <p class="subtitle">Sirviendo a la iglesia local con recursos para potenciar un mejor servicio.</p>
+                <a href="#oratoria" class="cta-button">Explora Nuestros Manuales</a>
+            </div>
+        </div>
+    </section>
 
     <main>
-        <section id="manuales" class="container">
-            <h2>Nuestros Manuales</h2>
-            <div class="manual">
-                <div class="manual-texto">
-                    <h3>Oratoria</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        <section id="oratoria" class="container manual-section oratoria-bg">
+            <h2>Manual de Oratoria</h2>
+            <div class="manual-content reverse-layout">
+                <div class="manual-text">
+                    <h3>Domina el Arte de Comunicar el Evangelio</h3>
+                    <p>Nuestro Manual de Oratoria está diseñado específicamente para predicadores, pastores y líderes cristianos que desean impactar a su audiencia con mensajes poderosos y transformadores. Aprenderás técnicas probadas para estructurar sermones, usar el lenguaje corporal efectivamente, modular tu voz para generar énfasis y conectar emocionalmente con la congregación.</p>
+                    <p>Incluye ejercicios prácticos, ejemplos bíblicos de grandes comunicadores como Pablo y Pedro, y estrategias para vencer el miedo escénico. Perfecto para quienes buscan transmitir la Palabra de Dios con claridad, convicción y poder del Espíritu Santo.</p>
+                    <ul>
+                        <li>Técnicas de estructuración de mensajes</li>
+                        <li>Uso efectivo del lenguaje corporal</li>
+                        <li>Modulación vocal y control de nervios</li>
+                        <li>Ejemplos bíblicos aplicados</li>
+                        <li>Ejercicios prácticos semanales</li>
+                    </ul>
                 </div>
                 <div class="manual-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="manual">
-                <div class="manual-texto">
-                    <h3>Evangelismo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-                </div>
-                <div class="manual-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="manual">
-                <div class="manual-texto">
-                    <h3>Discipulado</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-                </div>
-                <div class="manual-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID1" title="Presentación Manual de Oratoria" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
-        <section id="quienes-somos" class="container">
+        <section id="evangelismo" class="container manual-section evangelismo-bg">
+            <h2>Manual de Evangelismo</h2>
+            <div class="manual-content">
+                <div class="manual-video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID2" title="Presentación Manual de Evangelismo" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="manual-text">
+                    <h3>Lleva el Evangelio con Poder y Sabiduría</h3>
+                    <p>Este manual transformará tu approach evangelístico con herramientas prácticas basadas en principios bíblicos. Diseñado tanto para nuevos creyentes como para evangelistas experimentados, encontrarás métodos adaptados a diferentes contextos culturales y generacionales.</p>
+                    <p>Aprenderás a compartir tu testimonio de manera efectiva, responder preguntas difíciles, usar apologética básica, y seguir el modelo de Jesús en el evangelismo. Incluye guías para evangelismo personal, en grupos pequeños y campañas masivas, todo con fundamento escritural y enfoque en el discipulado.</p>
+                    <ul>
+                        <li>Métodos bíblicos de evangelización</li>
+                        <li>Como compartir tu testimonio efectivamente</li>
+                        <li>Respuestas a objeciones comunes</li>
+                        <li>Evangelismo en diferentes contextos</li>
+                        <li>Herramientas para seguimiento y discipulado</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="discipulado" class="container manual-section discipulado-bg">
+            <h2>Manual de Discipulado</h2>
+            <div class="manual-content reverse-layout">
+                <div class="manual-text">
+                    <h3>Formando Discípulos que Hacen Discípulos</h3>
+                    <p>Basado en el mandato de Mateo 28:19-20, este manual proporciona un sistema completo para el discipulado cristiano. Desde los fundamentos de la fe hasta el liderazgo espiritual, guiarás a nuevos creyentes hacia una relación madura con Cristo.</p>
+                    <p>El manual incluye 12 lecciones progresivas con estudios bíblicos profundos, preguntas reflexivas, proyectos prácticos y metas de crecimiento espiritual. Perfecto para líderes de grupos pequeños, mentores y pastores que buscan establecer cimientos sólidos en la vida de los creyentes.</p>
+                    <ul>
+                        <li>Doctrinas fundamentales de la fe</li>
+                        <li>Cómo desarrollar hábitos espirituales</li>
+                        <li>Guías para mentoría uno a uno</li>
+                        <li>Evaluaciones de crecimiento espiritual</li>
+                        <li>Material para grupos de discipulado</li>
+                    </ul>
+                </div>
+                <div class="manual-video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID3" title="Presentación Manual de Discipulado" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="merchandising" class="container merchandising-bg">
+            <h2>Merchandising</h2>
+            <p class="section-intro">Productos inspiradores para fortalecer tu fe y compartir el mensaje.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="assets/img/camiseta.jpg" alt="Camiseta Cristiana" class="card-img">
+                    <div class="card-content">
+                        <h3>Camisetas Inspiradoras</h3>
+                        <p>Diseños con versículos bíblicos y mensajes de fe. Perfectas para el día a día.</p>
+                        <button class="buy-btn">Comprar Ahora</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/taza.jpg" alt="Taza de Fe" class="card-img">
+                    <div class="card-content">
+                        <h3>Tazas de Fe</h3>
+                        <p>Tazas con frases motivadoras para empezar el día con Dios.</p>
+                        <button class="buy-btn">Comprar Ahora</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/libro.webp" alt="Libro de Oración" class="card-img">
+                    <div class="card-content">
+                        <h3>Libros de Oración</h3>
+                        <p>Guías devocionales para profundizar en la oración diaria.</p>
+                        <button class="buy-btn">Comprar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quienes-somos" class="container quienes-bg">
             <h2>¿Quiénes Somos?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+            <div class="quienes-content">
+                <img src="assets/img/logo.png" alt="Logo Raíz y Roca" class="quienes-img" />
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="contacto" class="container">
+        <section id="futuras-areas" class="container futuras-bg">
+            <h2>Próximamente</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-text">
+                            <h3>App de Asistencias</h3>
+                            <p>Una herramienta para llevar un registro eficiente de la asistencia a tus reuniones y eventos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-text">
+                            <h3>App de Ofrendas</h3>
+                            <p>Facilita la gestión y el registro de las ofrendas de tu congregación de manera segura y transparente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="container contacto-bg">
             <h2>Contáctanos</h2>
-            <form id="contact-form">
+            <form id="contact-form" class="enhanced-form">
                 <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    <label for="mensaje"><i class="fas fa-comment"></i> Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
                 </div>
-                <button type="submit">Enviar por WhatsApp</button>
+                <button type="submit" id="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                </button>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer-bg">
         <div class="container">
             <p>&copy; 2025 Ministerio Raíz y Roca. Todos los derechos reservados.</p>
         </div>

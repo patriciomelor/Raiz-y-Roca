@@ -1,123 +1,466 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
-
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #222;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-header {
-    background-color: #003366;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(25, 118, 210, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 10px rgba(25, 118, 210, 0.2);
 }
-
-header h1 {
+.navbar.scrolled {
+    background: rgba(25, 118, 210, 1);
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.nav-brand h2 {
     margin: 0;
-    font-size: 2.5em;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: #bbdefb;
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background-image: url('https://source.unsplash.com/1920x1080/?cross,faith');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(25, 118, 210, 0.6);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
 .subtitle {
-    font-size: 1.2em;
-    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
-
-main {
-    padding: 20px 0;
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #1976d2;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 h2 {
     text-align: center;
-    color: #003366;
+    color: #1976d2;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
     margin-bottom: 30px;
 }
 
-.manual {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Estilos para Secciones de Manuales (Diferenciación de Fondos) */
+.manual-section {
+    margin: 60px auto;
+    padding: 40px 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.1);
+    overflow: hidden;
 }
 
-.manual-texto, .manual-video {
+/* Fondos Diferenciados para Cada Sección */
+.oratoria-bg {
+    background: #e3f2fd;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.evangelismo-bg {
+    background: linear-gradient(to right, #fff 0%, #f0f8ff 100%);
+    border-bottom: 2px solid #e3f2fd;
+}
+.discipulado-bg {
+    background: #f5f5f5;
+    background-image: 
+        radial-gradient(circle at 25% 25%, #e3f2fd 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, #e3f2fd 2px, transparent 2px);
+    background-size: 50px 50px;
+}
+.merchandising-bg {
+    background: #e3f2fd;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+    padding: 40px 0;
+}
+.quienes-bg {
+    background: #e8f5e8;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+    padding: 40px 0;
+}
+.futuras-bg {
+    background: #f8f9ff;
+    border: 1px solid #e3f2fd;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+    padding: 40px 0;
+}
+.contacto-bg {
+    background: #bbdefb;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #1976d2, transparent),
+        radial-gradient(1px 1px at 40px 70px, rgba(25, 118, 210, 0.5), transparent);
+    background-size: 50px 50px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+    padding-bottom: 40px;
+}
+
+.manual-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+.manual-content.reverse-layout {
+    flex-direction: row-reverse;
+}
+.manual-text {
+    flex: 1;
+}
+.manual-text h3 {
+    color: #1976d2;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.manual-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+.manual-text ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+.manual-text li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #444;
+}
+.manual-video {
     flex: 1;
     min-width: 300px;
-    padding: 10px;
 }
-
 .manual-video iframe {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     width: 100%;
     height: 315px;
 }
 
-#quienes-somos {
-    background-color: white;
-    padding: 40px 20px;
-    text-align: center;
+/* Cards Grid (para Merchandising y Otras) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
 }
-
-#contacto {
-    padding: 40px 20px;
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.12);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-#contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
 }
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input, .form-group textarea {
+.card-img {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    height: 200px;
+    object-fit: cover;
 }
-
-button {
-    background-color: #005f9e;
-    color: white;
-    padding: 10px 20px;
+.card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-content h3 {
+    color: #1976d2;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+.card-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+.buy-btn {
+    background: #1976d2;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 1em;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: auto;
+    align-self: flex-start;
+}
+.buy-btn:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
 }
 
-button:hover {
-    background-color: #003366;
+/* Quiénes Somos */
+.quienes-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 0;
+}
+.quienes-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
 }
 
-footer {
-    background-color: #003366;
-    color: white;
+/* Formulario de Contacto Mejorado */
+.enhanced-form {
+    animation: fadeIn 0.5s ease-in-out;
+    max-width: 500px;
+    margin: 24px auto 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.15);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: 500;
+    color: #1976d2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.form-group label i {
+    color: #42a5f5;
+    font-size: 1.1rem;
+}
+input, textarea {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid #90caf9;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    position: relative;
+}
+input:focus, textarea:focus {
+    border-color: #1976d2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+    transform: scale(1.02);
+}
+input:invalid, textarea:invalid {
+    border-color: #f44336;
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+}
+input::placeholder, textarea::placeholder {
+    color: #90caf9;
+    font-style: italic;
+}
+#whatsapp-btn {
+    background: linear-gradient(45deg, #1976d2, #42a5f5);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+#whatsapp-btn:hover {
+    transform: scale(1.02) rotate(1deg);
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+}
+#whatsapp-btn i {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.footer-bg {
+    background: #1976d2;
+    color: #fff;
+    padding: 24px 0;
+    margin-top: 48px;
     text-align: center;
-    padding: 20px 0;
+    border-radius: 0 0 16px 16px;
+}
+.footer-bg p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Media Queries para Responsive */
+@media (max-width: 900px) {
+    .manual-content,
+    .manual-content.reverse-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .manual-video {
+        width: 100%;
+        order: -1; /* Video arriba en mobile para mejor UX */
+    }
+    .manual-video iframe {
+        height: 250px;
+    }
+    .quienes-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .nav-menu {
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
-    .manual {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero {
+        height: 60vh;
+    }
+    .nav-menu {
         flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(25, 118, 210, 0.98);
+        padding: 20px;
+        display: none; /* Oculto por defecto; agregar toggle JS si quieres menú hamburguesa */
+    }
+    .enhanced-form {
+        padding: 15px;
+        margin: 20px;
+    }
+    input, textarea {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .quienes-img {
+        width: 80px;
+        height: 80px;
+    }
+    .manual-video iframe {
+        height: 200px;
+    }
+    .nav-menu {
+        display: flex; /* Mostrar en mobile si es necesario; ajusta con JS para hamburguesa */
     }
 }
